@@ -6,9 +6,7 @@
 //  Copyright © 2020 hr147. All rights reserved.
 //
 
-import UIKit
-
-final class ProductSceneFactory: NSObject {
+final class ProductSceneFactory {
     // MARK: - Private Properties
     
     //private let useCaseFactory: UseCaseFactory
@@ -22,6 +20,6 @@ final class ProductSceneFactory: NSObject {
     // MARK: - Public Methods
     
     func makeProductViewController() -> ProductViewController {
-        return .init()
+        return .init(viewModel: .init())
     }
 }
