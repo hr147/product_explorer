@@ -7,6 +7,7 @@
 //
 
 import Swinject
+import NetworkFeature
 
 /// Service locator for the application to resolve dependencies.
 final class ServiceLocator {
@@ -23,7 +24,7 @@ final class ServiceLocator {
     private init() {
         //Register dependencies
         container.register(ProductSceneFactory.self) { _  in
-            ProductSceneFactory()
+            ProductSceneFactory(useCaseFactory: NetworkFeature.ServiceLocator.shared.useCaseFactory())
         }.inObjectScope(.container)
     }
     

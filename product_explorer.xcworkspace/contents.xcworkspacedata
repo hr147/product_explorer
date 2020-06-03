@@ -7,4 +7,13 @@
    <FileRef
       location = "group:UIElements">
    </FileRef>
+   <FileRef
+      location = "group:AbstractFeature">
+   </FileRef>
+   <FileRef
+      location = "group:CommonUtilities">
+   </FileRef>
+   <FileRef
+      location = "group:NetworkFeature">
+   </FileRef>
 </Workspace>

@@ -20,10 +20,10 @@ extension NotifyViewModel {
     }
     
     static func emptyNotificationViewModel() -> Self {
-        .init(title: "Result not found", notification: "Please try again with different keyword.", image: #imageLiteral(resourceName: "search"))
+        .init(title: "Result not found", notification: "Please try again with different keyword.", image: #imageLiteral(resourceName: "placeholder"))
     }
     
     static func startNotificationViewModel() -> Self {
-        .init(title: "Search Users...", notification: "", image: #imageLiteral(resourceName: "search"))
+        .init(title: "View Products...", notification: "", image: #imageLiteral(resourceName: "placeholder"))
     }
 }
