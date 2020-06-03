@@ -27,6 +27,7 @@
 		BE0851EC2487CD91006E9D82 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0851EB2487CD91006E9D82 /* ProductTableViewCell.swift */; };
 		BE0851EE2487CDB0006E9D82 /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0851ED2487CDB0006E9D82 /* ProductCellViewModel.swift */; };
 		BE0851F42487DDAB006E9D82 /* AbstractFeature in Frameworks */ = {isa = PBXBuildFile; productRef = BE0851F32487DDAB006E9D82 /* AbstractFeature */; };
+		BE0851F62487DE6F006E9D82 /* CommonUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = BE0851F52487DE6F006E9D82 /* CommonUtilities */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE0851F62487DE6F006E9D82 /* CommonUtilities in Frameworks */,
 				BE0851D82487C057006E9D82 /* UIElements in Frameworks */,
 				BE0851F42487DDAB006E9D82 /* AbstractFeature in Frameworks */,
 				BE0851E72487C766006E9D82 /* Swinject in Frameworks */,
@@ -243,6 +245,7 @@
 				BE0851D72487C057006E9D82 /* UIElements */,
 				BE0851E62487C766006E9D82 /* Swinject */,
 				BE0851F32487DDAB006E9D82 /* AbstractFeature */,
+				BE0851F52487DE6F006E9D82 /* CommonUtilities */,
 			);
 			productName = ProductExplorer;
 			productReference = BE0851A12487B4BD006E9D82 /* ProductExplorer.app */;
@@ -626,6 +629,10 @@
 		BE0851F32487DDAB006E9D82 /* AbstractFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AbstractFeature;
+		};
+		BE0851F52487DE6F006E9D82 /* CommonUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommonUtilities;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

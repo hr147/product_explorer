@@ -8,8 +8,8 @@
 
 import Foundation
 import Combine
-//import AbstractFeature
-//import CommonUtilities
+import AbstractFeature
+import CommonUtilities
 
 enum ProductViewModelState {
     case show([ProductCellViewModel])
@@ -44,34 +44,34 @@ final class ProductViewModel {
     
     // MARK: - Private Properties
     
-//    private var cancellable: [AnyCancellable] = []
-//    private let productUseCase: ProductUseCase
-//    private let productsSubject = CurrentValueSubject<[Product], Never>([])
-//    
-//    // MARK: - Init
-//    
-//    init(productUseCase: ProductUseCase) {
-//        self.productUseCase = productUseCase
-//    }
-//    
-//    // MARK: - Public Methods
-//    
-//    func transform(input: ProductViewModelInput) -> ProductViewModelOutput {
-//        cancellable.forEach { $0.cancel() }
-//        cancellable.removeAll()
-//        
-//        let productResult = input.productTriggered
-//            .flatMap(productUseCase.products)
-//            .share()
-//        
-//        let products = productResult.compactMap({ try? $0.get()} )
-//        
-//        products.assign(to: \.value, on: productsSubject).store(in: &cancellable)
-//        
-//        let errorState = productResult.compactMap({ $0.error() }).map(ProductViewModelState.error)
-//        let usersState = products.filter { !$0.isEmpty }.mapSequenceElement(ProductCellViewModel.init).map(ProductViewModelState.show)
-//        let noResultState = products.filter { $0.isEmpty }.map { _ in ProductViewModelState.noResults }
-//        
-//        return Publishers.Merge3(errorState, usersState, noResultState).removeDuplicates().eraseToAnyPublisher()
-//    }
+    private var cancellable: [AnyCancellable] = []
+    private let productUseCase: ProductUseCase
+    private let productsSubject = CurrentValueSubject<[Product], Never>([])
+    
+    // MARK: - Init
+    
+    init(productUseCase: ProductUseCase) {
+        self.productUseCase = productUseCase
+    }
+    
+    // MARK: - Public Methods
+    
+    func transform(input: ProductViewModelInput) -> ProductViewModelOutput {
+        cancellable.forEach { $0.cancel() }
+        cancellable.removeAll()
+        
+        let productResult = input.productTriggered
+            .flatMap(productUseCase.products)
+            .share()
+        
+        let products = productResult.compactMap({ try? $0.get()} )
+        
+        products.assign(to: \.value, on: productsSubject).store(in: &cancellable)
+        
+        let errorState = productResult.compactMap({ $0.error() }).map(ProductViewModelState.error)
+        let usersState = products.filter { !$0.isEmpty }.mapSequenceElement(ProductCellViewModel.init).map(ProductViewModelState.show)
+        let noResultState = products.filter { $0.isEmpty }.map { _ in ProductViewModelState.noResults }
+        
+        return Publishers.Merge3(errorState, usersState, noResultState).removeDuplicates().eraseToAnyPublisher()
+    }
 }

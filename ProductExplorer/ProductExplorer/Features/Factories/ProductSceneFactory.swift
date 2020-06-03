@@ -6,20 +6,22 @@
 //  Copyright © 2020 hr147. All rights reserved.
 //
 
+import AbstractFeature
+
 final class ProductSceneFactory {
     // MARK: - Private Properties
     
-    //private let useCaseFactory: UseCaseFactory
+    private let useCaseFactory: UseCaseFactory
     
     // MARK: - Init
     
-//    init(useCaseFactory: UseCaseFactory) {
-//        self.useCaseFactory = useCaseFactory
-//    }
+    init(useCaseFactory: UseCaseFactory) {
+        self.useCaseFactory = useCaseFactory
+    }
     
     // MARK: - Public Methods
     
     func makeProductViewController() -> ProductViewController {
-        return .init(viewModel: .init())
+        return .init(viewModel: .init(productUseCase: useCaseFactory.makeProductUseCase()))
     }
 }

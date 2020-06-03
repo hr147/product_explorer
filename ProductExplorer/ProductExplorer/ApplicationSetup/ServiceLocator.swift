@@ -22,9 +22,9 @@ final class ServiceLocator {
     
     private init() {
         //Register dependencies
-        container.register(ProductSceneFactory.self) { _  in
-            ProductSceneFactory()
-        }.inObjectScope(.container)
+//        container.register(ProductSceneFactory.self) { _  in
+//            ProductSceneFactory(useCaseFactory: <#UseCaseFactory#>)
+//        }.inObjectScope(.container)
     }
     
     // MARK: - Public Methods
