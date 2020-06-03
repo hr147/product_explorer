@@ -7,22 +7,51 @@
 //
 
 import UIKit.UIImage
+//import AbstractFeature
+
+struct Product {
+     public let id: String
+       public let name: String
+       public let imageURL: URL?
+       public let userType: String
+       
+       public init(id: String, name: String, imageURL: URL?, userType: String) {
+           self.id = id
+           self.name = name
+           self.imageURL = imageURL
+           self.userType = userType
+       }
+}
 
 struct ProductCellViewModel {
     // MARK: - Public Properties
-    let id: String = UUID().uuidString
-    let name: String = "HR 123"
-    let imageURL: URL? = URL(string: "https://kredit.check24.de/konto-kredit/ratenkredit/nativeapps/imgs/08.png")
-    let userType: String = "user type"
+    
+    let name: String
+    let imageURL: URL?
+    let userType: String
     let placeHolderImage = #imageLiteral(resourceName: "placeholder")
+    
+    // MARK: - Private Properties
+    
+    private let product: Product
+    
+    // MARK: - Init
+    
+    init(_ product: Product) {
+        self.name = product.name
+        self.imageURL = product.imageURL
+        self.userType = "User Type: \(product.userType)"
+        self.product = product
+    }
+    
 }
 
 extension ProductCellViewModel: Hashable {
     static func == (lhs: ProductCellViewModel, rhs: ProductCellViewModel) -> Bool {
-        lhs.id == rhs.id
+        lhs.product.id == rhs.product.id
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
+        hasher.combine(product.id)
     }
 }

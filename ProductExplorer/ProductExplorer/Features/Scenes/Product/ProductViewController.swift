@@ -30,7 +30,6 @@ class ProductViewController: UITableViewController {
         super.viewDidLoad()
         configureUI()
         bindViewModel()
-        update(with: [.init(),.init(),.init()])
     }
     
     //    override func loadView() {
