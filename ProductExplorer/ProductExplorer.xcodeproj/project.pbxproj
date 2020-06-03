@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,17 @@
 		BE0851AE2487B4BE006E9D82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE0851AD2487B4BE006E9D82 /* Assets.xcassets */; };
 		BE0851B12487B4BE006E9D82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE0851AF2487B4BE006E9D82 /* LaunchScreen.storyboard */; };
 		BE0851BC2487B4BE006E9D82 /* ProductExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0851BB2487B4BE006E9D82 /* ProductExplorerTests.swift */; };
+		BE0851CA2487BF7E006E9D82 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0851C92487BF7D006E9D82 /* AppNavigator.swift */; };
+		BE0851D22487BFD7006E9D82 /* NotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0851CE2487BFD7006E9D82 /* NotifyViewController.swift */; };
+		BE0851D32487BFD7006E9D82 /* NotifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0851CF2487BFD7006E9D82 /* NotifyViewModel.swift */; };
+		BE0851D42487BFD7006E9D82 /* NotifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0851D02487BFD7006E9D82 /* NotifyView.swift */; };
+		BE0851D52487BFD7006E9D82 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0851D12487BFD7006E9D82 /* AppNavigationController.swift */; };
+		BE0851D82487C057006E9D82 /* UIElements in Frameworks */ = {isa = PBXBuildFile; productRef = BE0851D72487C057006E9D82 /* UIElements */; };
+		BE0851DA2487C3CC006E9D82 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0851D92487C3CC006E9D82 /* ServiceLocator.swift */; };
+		BE0851E02487C558006E9D82 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0851DF2487C558006E9D82 /* ProductViewController.swift */; };
+		BE0851E22487C588006E9D82 /* ProductNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0851E12487C588006E9D82 /* ProductNavigator.swift */; };
+		BE0851E42487C5CA006E9D82 /* ProductSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0851E32487C5CA006E9D82 /* ProductSceneFactory.swift */; };
+		BE0851E72487C766006E9D82 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = BE0851E62487C766006E9D82 /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +45,15 @@
 		BE0851B72487B4BE006E9D82 /* ProductExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE0851BB2487B4BE006E9D82 /* ProductExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductExplorerTests.swift; sourceTree = "<group>"; };
 		BE0851BD2487B4BE006E9D82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE0851C92487BF7D006E9D82 /* AppNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		BE0851CE2487BFD7006E9D82 /* NotifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyViewController.swift; sourceTree = "<group>"; };
+		BE0851CF2487BFD7006E9D82 /* NotifyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyViewModel.swift; sourceTree = "<group>"; };
+		BE0851D02487BFD7006E9D82 /* NotifyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyView.swift; sourceTree = "<group>"; };
+		BE0851D12487BFD7006E9D82 /* AppNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		BE0851D92487C3CC006E9D82 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		BE0851DF2487C558006E9D82 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		BE0851E12487C588006E9D82 /* ProductNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNavigator.swift; sourceTree = "<group>"; };
+		BE0851E32487C5CA006E9D82 /* ProductSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSceneFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE0851D82487C057006E9D82 /* UIElements in Frameworks */,
+				BE0851E72487C766006E9D82 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +82,7 @@
 				BE0851A32487B4BD006E9D82 /* ProductExplorer */,
 				BE0851BA2487B4BE006E9D82 /* ProductExplorerTests */,
 				BE0851A22487B4BD006E9D82 /* Products */,
+				BE0851D62487C057006E9D82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				BE0851C72487B54A006E9D82 /* ApplicationSetup */,
+				BE0851CB2487BFD7006E9D82 /* Common */,
+				BE0851DB2487C496006E9D82 /* Features */,
 				BE0851C62487B510006E9D82 /* Resources */,
 			);
 			path = ProductExplorer;
@@ -103,10 +128,80 @@
 			isa = PBXGroup;
 			children = (
 				BE0851A42487B4BD006E9D82 /* AppDelegate.swift */,
-				BE0851A62487B4BD006E9D82 /* SceneDelegate.swift */,
+				BE0851C92487BF7D006E9D82 /* AppNavigator.swift */,
 				BE0851B22487B4BE006E9D82 /* Info.plist */,
+				BE0851A62487B4BD006E9D82 /* SceneDelegate.swift */,
+				BE0851D92487C3CC006E9D82 /* ServiceLocator.swift */,
 			);
 			path = ApplicationSetup;
+			sourceTree = "<group>";
+		};
+		BE0851CB2487BFD7006E9D82 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BE0851CC2487BFD7006E9D82 /* Controllers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BE0851CC2487BFD7006E9D82 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE0851CD2487BFD7006E9D82 /* Notify */,
+				BE0851D12487BFD7006E9D82 /* AppNavigationController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BE0851CD2487BFD7006E9D82 /* Notify */ = {
+			isa = PBXGroup;
+			children = (
+				BE0851CE2487BFD7006E9D82 /* NotifyViewController.swift */,
+				BE0851CF2487BFD7006E9D82 /* NotifyViewModel.swift */,
+				BE0851D02487BFD7006E9D82 /* NotifyView.swift */,
+			);
+			path = Notify;
+			sourceTree = "<group>";
+		};
+		BE0851D62487C057006E9D82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE0851DB2487C496006E9D82 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				BE0851DD2487C4B0006E9D82 /* Factories */,
+				BE0851DC2487C4A5006E9D82 /* Scenes */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		BE0851DC2487C4A5006E9D82 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BE0851DE2487C4B7006E9D82 /* Product */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BE0851DD2487C4B0006E9D82 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				BE0851E32487C5CA006E9D82 /* ProductSceneFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		BE0851DE2487C4B7006E9D82 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				BE0851DF2487C558006E9D82 /* ProductViewController.swift */,
+				BE0851E12487C588006E9D82 /* ProductNavigator.swift */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +220,10 @@
 			dependencies = (
 			);
 			name = ProductExplorer;
+			packageProductDependencies = (
+				BE0851D72487C057006E9D82 /* UIElements */,
+				BE0851E62487C766006E9D82 /* Swinject */,
+			);
 			productName = ProductExplorer;
 			productReference = BE0851A12487B4BD006E9D82 /* ProductExplorer.app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +274,9 @@
 				Base,
 			);
 			mainGroup = BE0851982487B4BD006E9D82;
+			packageReferences = (
+				BE0851E52487C766006E9D82 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = BE0851A22487B4BD006E9D82 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -209,8 +311,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE0851D52487BFD7006E9D82 /* AppNavigationController.swift in Sources */,
 				BE0851A52487B4BD006E9D82 /* AppDelegate.swift in Sources */,
+				BE0851D32487BFD7006E9D82 /* NotifyViewModel.swift in Sources */,
+				BE0851E22487C588006E9D82 /* ProductNavigator.swift in Sources */,
+				BE0851D22487BFD7006E9D82 /* NotifyViewController.swift in Sources */,
+				BE0851E42487C5CA006E9D82 /* ProductSceneFactory.swift in Sources */,
+				BE0851DA2487C3CC006E9D82 /* ServiceLocator.swift in Sources */,
+				BE0851D42487BFD7006E9D82 /* NotifyView.swift in Sources */,
+				BE0851E02487C558006E9D82 /* ProductViewController.swift in Sources */,
 				BE0851A72487B4BD006E9D82 /* SceneDelegate.swift in Sources */,
+				BE0851CA2487BF7E006E9D82 /* AppNavigator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +578,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE0851E52487C766006E9D82 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE0851D72487C057006E9D82 /* UIElements */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIElements;
+		};
+		BE0851E62487C766006E9D82 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE0851E52487C766006E9D82 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BE0851992487B4BD006E9D82 /* Project object */;
 }
