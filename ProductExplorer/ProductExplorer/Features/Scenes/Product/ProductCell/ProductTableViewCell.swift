@@ -9,7 +9,7 @@
 import UIKit
 import UIElements
 
-class ProductTableViewCell: UITableViewCell {
+final class ProductTableViewCell: UITableViewCell {
     // MARK: - Private Properties
     
     private let nameLabel: UILabel = {

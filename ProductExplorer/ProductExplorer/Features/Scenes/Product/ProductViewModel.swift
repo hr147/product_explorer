@@ -31,7 +31,6 @@ extension ProductViewModelState: Equatable {
 }
 
 struct ProductViewModelInput {
-    // triggered when the search query is updated
     let productTriggered: AnyPublisher<Void, Never>
 }
 

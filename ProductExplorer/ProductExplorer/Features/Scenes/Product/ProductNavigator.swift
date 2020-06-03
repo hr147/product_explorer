@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductNavigator {
+final class ProductNavigator {
     // MARK: - Private Properties
     
     private let rootController: UINavigationController

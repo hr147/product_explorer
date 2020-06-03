@@ -9,7 +9,7 @@
 import UIKit
 import Combine
 
-class ProductViewController: UITableViewController {
+final class ProductViewController: UITableViewController {
     private lazy var dataSource = makeDataSource()
     private var cancellable: [AnyCancellable] = []
     private let productTriggered = PassthroughSubject<Void, Never>()
@@ -35,11 +35,6 @@ class ProductViewController: UITableViewController {
         productTriggered.send(())
     }
     
-    //    override func loadView() {
-    //        super.loadView()
-    //        view = userSearchView
-    //    }
-    
     // MARK: - Private Methods
     
     private func configureUI() {
@@ -56,11 +51,11 @@ class ProductViewController: UITableViewController {
         add(notifyViewController)
         notifyViewController.showNotification(for: .startNotificationViewModel())
         
-        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+        let all = UIBarButtonItem(title: "All", style: .plain, target: nil, action: nil)
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        let camera = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: nil)
-        let compose = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: nil)
-        toolbarItems = [add, spacer, compose,spacer, camera]
+        let available = UIBarButtonItem(title: "Available", style: .plain, target: nil, action: nil)
+        let favorite = UIBarButtonItem(title: "Favorite", style: .plain, target: nil, action: nil)
+        toolbarItems = [all, spacer, available, spacer, favorite]
         
         
         navigationController?.setToolbarHidden(false, animated: false)
@@ -91,12 +86,6 @@ class ProductViewController: UITableViewController {
             update(with: users, animate: true)
         }
     }
-    
-    @objc
-    func addTapped() {
-        
-    }
-    
 }
 
 fileprivate extension ProductViewController {
