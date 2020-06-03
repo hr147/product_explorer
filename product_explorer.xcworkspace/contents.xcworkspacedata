@@ -4,4 +4,7 @@
    <FileRef
       location = "group:ProductExplorer/ProductExplorer.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:UIElements">
+   </FileRef>
 </Workspace>
