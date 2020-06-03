@@ -40,7 +40,7 @@ typealias ProductViewModelOutput = AnyPublisher<ProductViewModelState, Never>
 final class ProductViewModel {
     // MARK: - Public Properties
     
-    let screenTitle = "Repo Users"
+    let screenTitle = "Products"
     
     // MARK: - Private Properties
     
@@ -64,7 +64,7 @@ final class ProductViewModel {
             .flatMap(productUseCase.products)
             .share()
         
-        let products = productResult.compactMap({ try? $0.get()} )
+        let products = productResult.compactMap { try? $0.get().products }
         
         products.assign(to: \.value, on: productsSubject).store(in: &cancellable)
         

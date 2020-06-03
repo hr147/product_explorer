@@ -26,7 +26,7 @@ struct ProductCellViewModel {
     init(_ product: Product) {
         self.name = product.name
         self.imageURL = product.imageURL
-        self.userType = "User Type: \(product.userType)"
+        self.userType = "User Type: \(product.type)"
         self.product = product
     }
     
