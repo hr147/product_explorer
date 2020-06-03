@@ -7,4 +7,7 @@
    <FileRef
       location = "group:UIElements">
    </FileRef>
+   <FileRef
+      location = "group:AbstractFeature">
+   </FileRef>
 </Workspace>
